@@ -2,6 +2,7 @@
 
 // 1
 // Declare a variable named submissions that is initialized to an array with the following objects:
+
 const submissions = [{
     name: "Jane",
     score: 95,
@@ -50,7 +51,7 @@ console.log(submissions);
             name: addPerson.name,
             score: addPerson.score,
             date: addPerson.date,
-            passed: addPerson.score >= 60 ? true : false, // need to figure out >=60!!
+            passed: addPerson.score >= 60 ? true : false,
         });
 
         console.log(submissions);
@@ -84,7 +85,10 @@ console.log(submissions);
 // Parameter(s): array, index, score
 // Functionality: update an object’s score in the array at the specified index. Use conditional statements to set the value for the passed property to true if the score is greater than or equal to 60 and false otherwise.
     function editSubmission(array, index, score){
-        
+        submissions.score >= 60, true;
+        // console.log(true);
+        submissions.score < 60, false;
+        // console.log(false);
     }
 
 // 6
@@ -93,8 +97,8 @@ console.log(submissions);
 // Functionality: return the object in the array that has the provided name. Use the find method.
 
     function findSubmissionByName(array, name){
-        console.log(findIndex(function(array){
-            return array === "";
+        console.log(findIndex(function(name){
+            return submissions.name === "Jill";
         }))
     }
 
@@ -104,8 +108,6 @@ console.log(submissions);
 // Functionality: return the object in the array that has the lowest score. Use the forEach method to loop through the whole array.
 
 // Use Math.max() and Math.min()
-
-}
 
     function findLowestScore(array){
         score.forEach(function(){
@@ -139,17 +141,25 @@ console.log(submissions);
 // Declare a function named filterPassing
 // Parameter(s): array
 // Functionality: return a new array using the filter method. The filter method should find objects in the array that have passing scores. 
-    function filterPassing(array){
-        return 
-    }
+
+function filterPassing(score){
+    return submissions.score >= 60;
+}
+
+function filterPassingFunction() {
+    document.getElementsById("demo").innerHTML = submissions.score.filter(filterPassing);
+}    
 
 // 10
 // Declare a function named filter90AndAbove
 // Parameter(s): array
 // Functionality: return a new array using the filter method. The filter method should find objects in the array that have scores greater than or equal to 90.
-    function filter90AndAbove(array){
-        return 
+
+    function filter90AndAbove(score){
+        return submissions.score >= 90;
     }
-
-
+    
+    function filterPassingFunction() {
+        document.getElementsById("demo").innerHTML = submissions.score.filter(filterPassing);
+    }    
 }
